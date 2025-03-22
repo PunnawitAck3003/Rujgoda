@@ -11,7 +11,7 @@ const ReservationSchema = new mongoose.Schema({
     },
     hotel: {
         type: mongoose.Schema.ObjectId,
-        ref: 'Hospital',
+        ref: 'Hotel',
         required: true
     },
     createdAt: {
