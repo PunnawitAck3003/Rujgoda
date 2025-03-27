@@ -122,7 +122,7 @@ exports.updateReservation = async (req,res,next)=>{
 //@access Private
 exports.deleteReservation = async(req,res,next)=>{
   try{
-    const reservation = await Appointment.findById(req.params.id);
+    const reservation = await Reservation.findById(req.params.id);
     if(!reservation){
       return res.status(404).json({success:false, message:`No reservation with the id of ${req.params.id}`});
     }

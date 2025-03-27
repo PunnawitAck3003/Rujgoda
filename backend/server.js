@@ -12,6 +12,7 @@ connectDB();
 const hotels = require('./routes/hotels');
 const reservations = require('./routes/reservations');
 const auth = require('./routes/auth');
+const promotions = require('./routes/promotions')
 
 const app=express()
 
@@ -22,6 +23,7 @@ app.use(cors());
 app.use('/api/v1/hotels', hotels);
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/reservations', reservations);
+app.use('/api/v1/promotions', promotions);
 
 const PORT=process.env.PORT||5000;
 app.listen(PORT, console.log('Server running in ', process.env.NODE_ENV, ' mode on port ', PORT));
