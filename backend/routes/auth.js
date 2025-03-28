@@ -2,6 +2,7 @@ const express = require('express');
 const { register, login, getMe } = require('../controllers/auth');
 const router = express.Router();
 
+const passport = require('passport');
 const {protect}=require('../middleware/auth');
 
 router.post('/register', register);

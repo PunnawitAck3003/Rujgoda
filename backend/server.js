@@ -4,9 +4,8 @@ const cookieParser=require('cookie-parser');
 const connectDB = require('./config/db')
 const cors = require('cors');
 const passport = require('passport');
-require('./config/passport'); // Import Passport config
-
 dotenv.config({path:'./config/config.env'});
+require('./config/passport'); // Import Passport config
 
 connectDB();
 

@@ -17,8 +17,10 @@ const UserSchema = new mongoose.Schema({
     },
     tel: {
         type: String,
-        required: [true, 'Please add a phone number'],
+        required: false,
         unique: true,
+        sparse: true,
+        default: null,
         match: [
             /^[0-9]{10,15}$/,
             'Please enter a valid phone number'
