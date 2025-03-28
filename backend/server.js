@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 const cookieParser=require('cookie-parser');
 const connectDB = require('./config/db')
 const cors = require('cors');
+const passport = require('passport');
+require('./config/passport'); // Import Passport config
 
 dotenv.config({path:'./config/config.env'});
 
@@ -20,6 +22,7 @@ const app=express()
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
+app.use(passport.initialize());
 
 app.use('/api/v1/hotels', hotels);
 app.use('/api/v1/auth', auth);
