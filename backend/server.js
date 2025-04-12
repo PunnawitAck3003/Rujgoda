@@ -20,7 +20,10 @@ const app=express()
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:3000", // Specify the frontend's origin
+    credentials: true // Allow credentials
+}));
 app.use(passport.initialize());
 
 app.use('/api/v1/hotels', hotels);
