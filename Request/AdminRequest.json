@@ -1,0 +1,11 @@
+[
+    {
+        "name":"admintest1",
+        "email":"admintest1@gmail.com",
+        "password":"123456",
+        "role":"admin",
+        "tel":"0642103885",
+        "requestCode":"200",
+        "checkName": "Valid Admin format"
+    }
+]

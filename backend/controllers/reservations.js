@@ -50,7 +50,7 @@ exports.getReservation = async(req,res,next)=>{
   try{
     const reservation = await Reservation.findById(req.params.id).populate({
       path: 'hotel',
-      select: 'name description tel'
+      select: 'name address district province tel'
     });
 
     if(!reservation){
@@ -83,7 +83,7 @@ exports.addReservation = async(req,res,next)=>{
       return res.status(400).json({success:false, message:`The user with ID ${req.user.id} has already made 3 reservations`});
     }
     const reservation = await Reservation.create(req.body);
-    res.status(200).json({success:true, data: reservation});
+    res.status(201).json({success:true, data: reservation});
   }catch(err){
     console.log(err.stack);
     return res.status(500).json({success:false, message:'Cannot create reservation'});

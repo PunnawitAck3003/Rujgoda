@@ -1,0 +1,38 @@
+[
+    {
+        "name":"test1",
+        "email":"test1@gmail.com",
+        "password":"123456",
+        "role":"user",
+        "tel":"0642103885",
+        "requestCode":"200",
+        "checkName": "Valid User format"
+    },
+    {
+        "name":"test2",
+        "email":"test2@gmail.com",
+        "password":"123456",
+        "role":"user",
+        "tel":"0642103xxx",
+        "requestCode":"400",
+        "checkName": "Invalid phone number format 1 include characters"
+    },
+    {
+        "name":"test3",
+        "email":"test3@gmail.com",
+        "password":"123456",
+        "role":"user",
+        "tel":"0642",
+        "requestCode":"400",
+        "checkName": "Invalid phone number format 2 too short"
+    },
+    {
+        "name":"test4",
+        "email":"test4@gmail.com",
+        "password":"123456",
+        "role":"customer",
+        "tel":"0642103885",
+        "requestCode":"400",
+        "checkName": "Invalid User role"
+    }
+]

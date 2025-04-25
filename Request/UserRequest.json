@@ -1,0 +1,11 @@
+[
+    {
+        "name":"usertest1",
+        "email":"usertest1@gmail.com",
+        "password":"123456",
+        "role":"user",
+        "tel":"0642103885",
+        "requestCode":"200",
+        "checkName": "Valid User format"
+    }
+]

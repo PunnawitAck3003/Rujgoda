@@ -11,7 +11,7 @@ export default function Home() {
 
   const [favorites, setFavorites] = useState<Favorites[] | []>([]);
   const [user, setUser] = useState<User | null>(null);
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZTRlNmJlN2UyZGQ2MmU4ZDQ4MDNhYyIsImlhdCI6MTc0NDQzNTMwMiwiZXhwIjoxNzQ3MDI3MzAyfQ.az6RA-bznboBuaIEzhvD7QPF1EiXofDhlmBzAJ1INqE";
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MGI1NjBkNTBlZDJhYmQ5NTdkOWRjZiIsImlhdCI6MTc0NTU3MzM5MywiZXhwIjoxNzQ4MTY1MzkzfQ.U21DV3sNrfTTMpoyPwAT7CXxgPWlctpKPQMuzn1Z2Os";
 
   useEffect(() => {
     const fetchData = async () => {

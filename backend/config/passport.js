@@ -18,6 +18,7 @@ passport.use(
         if (!user) {
           user = await User.create({
             name: profile.displayName,
+            tel: profile.phoneNumber || null, // Assuming phone number is available in the profile
             email: profile.emails[0].value,
             password: 'google-auth', // Dummy password (won't be used)
           });

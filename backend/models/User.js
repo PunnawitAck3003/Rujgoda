@@ -18,7 +18,7 @@ const UserSchema = new mongoose.Schema({
     tel: {
         type: String,
         required: false,
-        unique: true,
+        unique: false,
         sparse: true,
         default: null,
         match: [
